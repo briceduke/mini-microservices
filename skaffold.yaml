@@ -16,16 +16,16 @@ build:
         manual:
           - src: 'src/**/*.tsx'
             dest: .
-    - image: briceduke/comments
-      context: comments
+    - image: briceduke/event-bus
+      context: event-bus
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: '*.js'
             dest: .
-    - image: briceduke/event-bus
-      context: event-bus
+    - image: briceduke/comments
+      context: comments
       docker:
         dockerfile: Dockerfile
       sync:
